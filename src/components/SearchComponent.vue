@@ -1,23 +1,21 @@
 <script>
-    import { store } from '../store';
 
     export default{
         name: 'SearchComponent',
         data() {
             return {
-                store,
+                searchInput: ''
             };
         },
-
-        log(message){
-            console.warn(message)
+        methods: {
+            
         }
     }
 </script>
 
 <template>
-    <input type="text" id="serch-input " v-model="store.searchedText">
-    <button @chick="log(store.searchedText)" :value="store.searchedText">Clicca</button>    
+    <input type="text" name="search-movies-input" id="search-movies-input" v-model="searchInput">
+    <button @click="$emit('onSearch', searchInput)">click</button>
 </template>
 
 <style lang="scss" scoped>

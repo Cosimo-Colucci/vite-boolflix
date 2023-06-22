@@ -15,9 +15,6 @@
 </script>
 
 <template>
-  <h1>
-    app
-  </h1>
   <MainApp/>
 </template>
 

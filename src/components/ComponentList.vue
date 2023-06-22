@@ -4,11 +4,10 @@
         name: 'ComponentList',
         data() {
             return {
-                apiUrl:'https://api.themoviedb.org/3/search/movie?api_key=9a4f4493b3ac828e491ed30b5045198c&query=',
             };
         },
         props:{
-            movies : Array,
+            componentList : Array,
         },
         methods:{
 
@@ -18,7 +17,11 @@
 
 <template>
     <div>
-        
+        <h1>
+            porca
+        </h1>
+    </div>
+    <div>
         <article v-for="movie in movies">
             <h1>
                 {{ movie.title }}

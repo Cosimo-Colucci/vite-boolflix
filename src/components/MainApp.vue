@@ -23,6 +23,7 @@
             .then((response) => {
                     console.log(response.data.results);
                     this.movies = response.data.results;
+                    console.log(this.movies);
             })
             .catch((error) => {
                 console.log(error)
@@ -30,15 +31,15 @@
         }
     },
     components: {
-        ComponentList,
         SearchComponent,
+        ComponentList,
     }
 }
 </script>
 
 <template>
-    <SearchComponent @onSearch="getMovies" />
-    <ComponentList :ComponentList = 'movies'/>
+    <SearchComponent @onSearch='getMovies' />
+    <ComponentList :componentList="movies"/>
 </template>
 
 <style lang="scss">
